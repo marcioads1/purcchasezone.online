@@ -139,23 +139,14 @@
       if (link) link.click();
     }</script>
 
-<!--data-adsx-custom-script:header:start--><!-- Start NB Pixel Snippet -->
-<script>
-!(function (e, n, t, i, p, a, s) {
-  e[i] ||
-    (((p = e[i] =
-      function () {
-        p.process ? p.process.apply(p, arguments) : p.queue.push(arguments);
-      }).queue = []),
-    (p.t = +new Date()),
-    ((a = n.createElement(t)).async = 1),
-    (a.src = 'https://static.newsbreak.com/business/tracking/nbpixel.js?t=' + 864e5 * Math.ceil(new Date() / 864e5)),
-    (s = n.getElementsByTagName(t)[0]).parentNode.insertBefore(a, s));
-})(window, document, 'script', 'nbpix'),
-  nbpix('init', 'ID-2085162287039221761'),
-  nbpix('event', 'pageload');
-</script>
-<!-- End NB Pixel Snippet --><!--data-adsx-custom-script:header:end--></head>
+<!--data-adsx-custom-script:header:start-->curl --location --request POST 'https://business.newsbreak.com/tracking/attributev2' \
+  --header 'Content-Type: text/plain' \
+  --data '{
+    "callback": {callback},
+    "tracking_id": "2097394087222870017",
+    "event_type": "complete_payment",
+    "nb_value": xxx
+  }'<!--data-adsx-custom-script:header:end--></head>
 
 <body>
   <div class="background" id="background"></div>
@@ -235,7 +226,4 @@ We are so confident in the quality of our <strong>scratch remover</strong> that 
 
 
 
-<!--data-adsx-custom-script:footer:start--><!-- Track conversion event, please use EXACT 'event', 'complete_payment' in the code below -->
-  <script>
-    nbpix('event','complete_payment');
-  </script><!--data-adsx-custom-script:footer:end--></body></html>
+<!--data-adsx-custom-script:footer:start-->curl --location --request GET 'https://business.newsbreak.com/tracking/attribute?callback={callback}&amp;tracking_id=2097394087222870017&amp;event_type=complete_payment&amp;nb_value={nb_value}'<!--data-adsx-custom-script:footer:end--></body></html>
